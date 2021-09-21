@@ -12,10 +12,25 @@
         <h1>
           <%= title %>
         </h1>
-        <p>This is the placeholder for Team Activity 02</p>
       </div>
     </div>
     <div class="container">
+      <p><%= message %></p><% message = ""; %>
+      <form method="POST" action="/ta02/addUser">
+          <input type="text" name="nameInput">
+          <button type="submit">Add Name</button>
+      </form>
+      <form method="POST" action="/ta02/removeUser">
+          <input type="text" name="nameRemove">
+          <button type="submit">Remove Name</button>
+      </form>
+
+      
+      <ul>
+        <% for(let name of nameArray) { %>
+          <li><%= name %></li>
+        <% } %>
+      </ul>
 
     </div>
 
