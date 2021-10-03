@@ -1,6 +1,8 @@
 const routes = require('express').Router();
+
 const proveActivities = require('./proveRoutes');
 const teamActivities = require('./teamRoutes');
+// Hopefully this works this time. Heroku doesn't like my app.
 
 routes.use('/proveAssignments', proveActivities);
 routes.use('/teamActivities', teamActivities);
