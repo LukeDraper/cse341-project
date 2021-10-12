@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ../includes/header.ejs %>
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+    <div class="jumbotron text-center" style="background-color: <%= session.style %>;">
+      <div class="container">
+        <h1>
+          <%= title %>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+        <form action="/ta05/change-style" method="POST">
+            <input type="text" name="color">
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <form action="/ta05/counter" method="POST">
+            <input type="submit" value="Increment">
+            <input type="hidden" name="countermethod" value="increment">
+        </form>
+        <br>
+        <form action="/ta05/counter" method="POST">
+            <input type="submit" value="Decrement">
+            <input type="hidden" name="countermethod" value="decrement">
+        </form>
+        <br>
+        <p>Count: <%= session.counter %> </p>
+        <br>
+        <form action="/ta05/reset" method="POST">
+            <input type="submit" value="Reset">
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
