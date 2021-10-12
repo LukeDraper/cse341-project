@@ -2,12 +2,12 @@
 <html>
 
 <head>
-  <% include ../../includes/header.ejs %>
+  <% include ../includes/header.ejs %>
   <link rel="stylesheet" type="text/css" href="stylesheets/ta03.css"/>
 </head>
 
 <body>
-  <% include ../../includes/nav.ejs %>
+  <% include ../includes/nav.ejs %>
     <div class="jumbotron text-center">
       <div class="container">
         <h1>
@@ -21,7 +21,7 @@
     </form>
     <div class="container">
           <% for( let book of filterMesh) { %>
-          <% include ../../partials/card.ejs %>
+          <% include ../partials/card.ejs %>
         <% } %>
 
     </div>
